@@ -1,48 +1,103 @@
-# QuizPro Python Flask Backend & SQLite Database
+🎓 QuizPro – Online Quiz & Result Management System
 
-This directory contains the Python Flask backend for the **QuizPro - Online Quiz and Result Management System**.
+A web-based platform for online examinations and result management.
 
-## Database Schema (SQLite)
-The application connects to `quizpro.db` with the following 4 core relational tables:
-- **`Users`**: `id`, `name`, `email`, `password_hash`, `role` (`student` or `admin`)
-- **`Quizzes`**: `id`, `title`, `description`, `duration`, `category`, `pass_mark`, `published`
-- **`Questions`**: `id`, `quiz_id`, `question`, `option_a`, `option_b`, `option_c`, `option_d`, `correct_answer`, `explanation`, `points`
-- **`Attempts`**: `id`, `user_id`, `quiz_id`, `score`, `total`, `percentage`, `time_spent_seconds`, `answers_json`, `submitted_at`
+🌐 Live Website: Visit QuizPro
 
-## How to Run Locally
+📌 About the Project
 
-### 1. Prerequisites
-- Python 3.8+ installed (`python3 --version`)
+QuizPro is an Online Quiz & Result Management System designed to provide a digital platform for conducting quizzes and managing examination results.
 
-### 2. Create and Activate Virtual Environment
-```bash
-cd backend
-python3 -m venv venv
+The project combines a modern web interface with backend functionality to support an online examination experience.
 
-# On macOS/Linux:
-source venv/bin/activate
+Whether used for practice, assessments, or managing quiz results, QuizPro aims to make online examinations more accessible and organized.
 
-# On Windows:
-venv\Scripts\activate
-```
+✨ Project Highlights
+📝 Online Quiz Platform
+🎯 Digital Examination Experience
+📊 Result Management
+💻 Modern Web Application
+⚙️ Frontend and Backend Architecture
+🛠️ Technology Stack
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+Based on the project structure:
 
-### 4. Initialize Database & Seed Sample Quizzes
-The database and sample data auto-initialize on the first run of the app, or you can manually initialize:
-```bash
-python database.py
-```
+Technology	Purpose
+React	Frontend interface
+TypeScript	Type-safe development
+Vite	Development and build tooling
+Python	Backend components
+Bun	Package management
+CSS	Styling
+📂 Project Structure
+text
+QuizPro/
+│
+├── backend/
+│   ├── app.py
+│   ├── database.py
+│   └── README.md
+│
+├── src/
+│   ├── components/
+│   ├── lib/
+│   ├── server/
+│   ├── types/
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── .env.example
+├── index.html
+├── package.json
+├── bun.lock
+├── server.ts
+├── tsconfig.json
+└── vite.config.ts
 
-### 5. Run the Flask Server
-```bash
-python app.py
-```
-The server will start listening at `http://127.0.0.1:5000/`.
+🚀 Getting Started
 
-## Pre-seeded Test Accounts
-- **Student**: `student@quizpro.edu` / `alex123`
-- **Admin**: `admin@quizpro.edu` / `admin123`
+Follow these steps to run the project locally.
+
+1. Clone the Repository
+bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+
+2. Navigate to the Project
+bash
+cd YOUR-REPOSITORY
+
+3. Install Dependencies
+bash
+bun install
+
+4. Configure Environment Variables
+
+Create your local environment file using .env.example as a reference.
+
+bash
+cp .env.example .env
+
+
+Add the required environment variable values.
+
+5. Start the Development Server
+bash
+bun run dev
+
+
+Check your package.json scripts for the available development commands.
+
+🌐 Live Demo
+
+Experience QuizPro online:
+
+https://quizpro-online-exam-9284.ai.studio/
+
+📌 Project Status
+
+🚧 Development and improvements are ongoing.
+
+👨‍💻 Developer
+
+Developed by: SIDDU VENKATA MOUNI VARDHAN REDDY
